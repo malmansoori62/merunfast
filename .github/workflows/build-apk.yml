@@ -29,6 +29,10 @@ jobs:
       - name: Create Flutter project skeleton
         run: flutter create --org com.rpg.gladiator --project-name rpggame_app /tmp/rpggame_build
 
+      - name: Update Kotlin version
+        run: |
+          sed -i 's/org.jetbrains.kotlin.android" version "[^"]*"/org.jetbrains.kotlin.android" version "1.9.22"/' /tmp/rpggame_build/android/settings.gradle
+
       - name: Copy our source code into skeleton
         run: |
           cp -r rpggame_app/lib /tmp/rpggame_build/
