@@ -26,17 +26,25 @@ jobs:
           channel: stable
           cache: true
 
+      - name: Create Flutter project skeleton
+        run: flutter create --org com.rpg.gladiator --project-name rpggame_app /tmp/rpggame_build
+
+      - name: Copy our source code into skeleton
+        run: |
+          cp -r rpggame_app/lib /tmp/rpggame_build/
+          cp rpggame_app/pubspec.yaml /tmp/rpggame_build/pubspec.yaml
+
       - name: Get dependencies
-        working-directory: rpggame_app
+        working-directory: /tmp/rpggame_build
         run: flutter pub get
 
       - name: Build APK (release)
-        working-directory: rpggame_app
+        working-directory: /tmp/rpggame_build
         run: flutter build apk --release --no-tree-shake-icons
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: gladiator-uprising-apk
-          path: rpggame_app/build/app/outputs/flutter-apk/app-release.apk
+          path: /tmp/rpggame_build/build/app/outputs/flutter-apk/app-release.apk
           retention-days: 30
