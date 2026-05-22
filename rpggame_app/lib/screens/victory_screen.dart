@@ -80,6 +80,7 @@ class VictoryScreen extends StatelessWidget {
                                   padding: const EdgeInsets.only(bottom: 8),
                                   child: ItemCard(item: item as BaseItem),
                                 ))
+                            .toList()
                             .animate(interval: 100.ms)
                             .fadeIn()
                             .slideX(begin: 0.3),

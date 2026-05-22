@@ -22,7 +22,7 @@ class DefeatScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.skull, color: Colors.red, size: 80)
+              const Icon(Icons.sentiment_very_dissatisfied, color: Colors.red, size: 80)
                   .animate()
                   .fadeIn(duration: 800.ms)
                   .scale(begin: const Offset(0.3, 0.3)),
