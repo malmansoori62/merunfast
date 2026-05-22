@@ -1,0 +1,47 @@
+# Flutter/Dart
+rpggame_app/.dart_tool/
+rpggame_app/.flutter-plugins
+rpggame_app/.flutter-plugins-dependencies
+rpggame_app/.packages
+rpggame_app/build/
+rpggame_app/.pub-cache/
+rpggame_app/.pub/
+
+# Android
+rpggame_app/android/.gradle/
+rpggame_app/android/local.properties
+rpggame_app/android/key.properties
+rpggame_app/android/app/debug/
+rpggame_app/android/app/release/
+rpggame_app/android/app/profile/
+
+# iOS
+rpggame_app/ios/Pods/
+rpggame_app/ios/.symlinks/
+rpggame_app/ios/Flutter/Flutter.framework
+rpggame_app/ios/Flutter/Flutter.podspec
+
+# macOS
+rpggame_app/macos/Flutter/ephemeral/
+
+# Windows
+rpggame_app/windows/flutter/ephemeral/
+
+# Web
+rpggame_app/web/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.key
+*.pem
